@@ -67,7 +67,13 @@
                 </div>
 
                 {{! badge badge-pill badge-danger font-weight-normal }}
-                <span>{{this.rating}}<i class="fas fa-star fa-xs"></i></span>
+
+                {{! Breaking Dropped all .badge-* color classes for background utilities (e.g., use .bg-primary instead of .badge-primary). }}
+                {{! Breaking Dropped .badge-pill—use the .rounded-pill utility instead. }}
+                {{! fw-normal: https://getbootstrap.com/docs/5.3/utilities/text/#font-weight-and-italics }}
+                <span
+                  class="badge rounded-pill bg-danger fw-normal"
+                >{{this.rating}}<i class="fas fa-star fa-xs"></i></span>
 
               </div>
             </div>
